@@ -1,4 +1,4 @@
-const mongoose = require("mongoose")
+import mongoose from "mongoose";
 
 async function connectToDb() {
     try {
@@ -11,17 +11,17 @@ async function connectToDb() {
 
 
 
-const Schema = mongoose.Schema;
+// const Schema = mongoose.Schema;
 
-const StudentSchema = new Schema({
-    name: String,
-    age: Number
-})
+// const StudentSchema = new Schema({
+//     name: String,
+//     age: Number
+// })
 
-const StudentCollection = mongoose.model("student", StudentSchema)
+// const StudentCollection = mongoose.model("student", StudentSchema)
 
 
-module.exports = {
-    "connectToDb": connectToDb,
-    "StudentCollection": StudentCollection
-}
+// module.exports = {
+//     "connectToDb": connectToDb,
+//     "StudentCollection": StudentCollection
+// }

@@ -1,9 +1,10 @@
-const mongoose = require("mongoose")
-
-
+import mongoose from "mongoose";
 const UserSchema = mongoose.Schema({
-    username: { type: String, unique: true },
-    password: String
+    email: { type: String, unique: true },
+    password: String,
+    name: String,
+    products: mongoose.Schema.Types.ObjectId,
+    created:{type:Date, default: new Date()}
 })
 
 const UserModel = mongoose.model("user", UserSchema)
